@@ -86,9 +86,9 @@ function toggleCompleted(index) {
 function editTask(index) {
     const tasks = getTask();
     const newTask = prompt("Edit your task:", tasks[index].text);
-    if (newTask === null && newTask === "") {
+    if (newTask !== null && newTask !== "") {
         tasks[index].text = newTask.trim();
-    }
+    };
 
     saveTask(tasks);
     renderTask();
